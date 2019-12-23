@@ -1,0 +1,129 @@
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0;}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	color: #fff;
+	background: #FF0000;
+}
+.slideshow {
+	position:absolute;
+	background:rgba(0,0,0,0);
+}
+canvas{
+	background:rgba(0,0,0,0);
+}
+a {
+	color: #888;
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	color: #333;
+}
+.codrops-icon:before {
+	font-family: 'codropsicons';
+	margin: 0 4px;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon-drop:before {
+	content: "\e001";
+}
+
+.codrops-icon-prev:before {
+	content: "\e004";
+}
+
+@media screen and (max-width: 25em) {
+
+	.codrops-icon span {
+		display: none;
+	}
+
+}
+
+.ip-slideshow-wrapper,
+.ip-slideshow {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.ip-nav-left,
+.ip-nav-right {		
+	width: 80px;
+	height: 80px;
+	top: 50%;
+	margin-top: -40px;
+	z-index: 100;		
+	position: absolute;
+	border:1px solid rgba(255,255,255,0.3);
+	border-radius: 50%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;				
+}
+			
+.ip-nav-left {
+	left: 20px;
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	transform: translateX(-100%);
+	opacity: 0;
+}
+				
+.ip-nav-right {
+	right: 20px;
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	transform: translateX(100%);
+	opacity: 0;
+}
+
+.ip-nav-left:hover, 
+.ip-nav-right:hover {		
+	background-color: rgba(255,255,255,0.5);
+	cursor: pointer;
+}
+
+.ip-nav-left:after,
+.ip-nav-right:after {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	font-family:sans-serif;		
+	font-size: 70px;
+	line-height: 80px;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+				
+.ip-nav-left:after {		
+	content: '<';						
+}
+				
+.ip-nav-right:after {		
+	content: '>';
+}
+	
+.ip-nav-show {			
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	transform: translateX(0%);
+	opacity: 1;			
+}
